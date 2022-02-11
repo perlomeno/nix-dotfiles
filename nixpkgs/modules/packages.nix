@@ -1,6 +1,7 @@
 { pkgs, ... }:
 
 {
+
   home.packages = with pkgs; [
     # office
     calibre
@@ -26,5 +27,9 @@
     tdesktop
     zoom-us
   ];
+
+  services.syncthing = {
+    enable = true;
+  };
 
 }
