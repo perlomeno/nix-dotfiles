@@ -59,8 +59,11 @@
   #
 
   environment.systemPackages = with pkgs; [
+    celluloid
     chromium
     git
+    pika-backup
+    rhythmbox
     virt-manager
   ];
 
