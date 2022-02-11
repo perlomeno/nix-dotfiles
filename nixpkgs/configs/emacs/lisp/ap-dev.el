@@ -8,6 +8,10 @@
 ;; Yaml-mode
 (use-package yaml-mode)
 
+;; Nix-mode
+(use-package nix-mode
+  :mode "\\.nix\\'")
+
 ;; Yasnippet
 ;; Snippet collection
 (use-package yasnippet-snippets)
