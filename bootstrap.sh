@@ -24,6 +24,6 @@ done
 echo "Cleaning /etc/nixos"
 sudo rm /etc/nixos/*
 echo "Copying configuration.nix to /etc/nixos"
-sudo cp nixos/configuration.nix /etc/nixos
+sudo cp $HOME/Dotfiles/nixos/configuration.nix /etc/nixos
 echo -e "Copying $NAME folder to /etc/nixos"
-sudo cp nixos/$NAME/* /etc/nixos
+sudo cp $HOME/Dotfiles/nixos/$NAME/* /etc/nixos
