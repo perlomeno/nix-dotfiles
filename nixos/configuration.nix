@@ -62,6 +62,7 @@
     celluloid
     chromium
     git
+    gnomeExtensions.appindicator
     pika-backup
     rhythmbox
     virt-manager
