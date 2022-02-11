@@ -1,14 +1,15 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   dconf.settings = {
   
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
-      night-light-temperature = "uint32 5500";
+      night-light-temperature = lib.hm.gvariant.mkUint32 3700;
     };
     
     "org/gnome/shell" = {
+      app-picker-layout = lib.hm.gvariant.mkTuple [];
       disable-user-extensions = false;
       enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" ];
       favorite-apps = [
@@ -18,7 +19,6 @@
         "nautilus.desktop"
         "evince.desktop"
       ];
-      app-picker-layout = [];
     };
 
     "org/gnome/desktop/background" = {
