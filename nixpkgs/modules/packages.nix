@@ -32,4 +32,17 @@
     enable = true;
   };
 
+
+  programs.chromium = {
+    enable = true;
+    extensions = [
+      # Bitwarden
+      { id = "nngceckbapebfimnlniiiahkandclblb"; }
+      # HTTPS Everywhere
+      { id = "gcbommkclmclpchllfjekcdonpmejbdp"; }
+      # Ublock Origin
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; }
+    ];
+  };
+
 }
