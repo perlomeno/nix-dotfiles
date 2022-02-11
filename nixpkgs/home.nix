@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+
   home.username = "ap";
   home.homeDirectory = "/home/ap";
 
@@ -14,4 +15,5 @@
     ./modules/gnome.nix
     ./modules/packages.nix
   ];
+
 }
