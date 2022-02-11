@@ -74,6 +74,7 @@
     gnome.gnome-contacts
     gnome.gnome-maps
     gnome.gnome-music
+    gnome.gnome-software
     gnome.gnome-weather
     gnome-photos
     gnome.totem
