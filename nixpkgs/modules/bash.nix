@@ -21,6 +21,7 @@
       tm = "tmux";
       ls = "exa --classify";
       tree = "exa --tree";
+      newdenv = "echo \"use nix\" > .envrc && direnv allow";
     };
   };
 
