@@ -109,6 +109,11 @@
   xdg.portal.enable = true;
   services.flatpak.enable = true;
 
+  nix.extraOptions = ''
+    keep-outputs = true
+    keep-derivations = true
+  '';
+
   system.stateVersion = "21.11";
 
 }

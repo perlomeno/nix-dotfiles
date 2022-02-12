@@ -15,13 +15,19 @@
     enable = true;
     profileExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
-      '';
+    '';
     shellAliases = {
       hmswitch = "home-manager switch";
       tm = "tmux";
       ls = "exa --classify";
       tree = "exa --tree";
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.readline = {
