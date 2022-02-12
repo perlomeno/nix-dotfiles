@@ -12,6 +12,11 @@
 (use-package nix-mode
   :mode "\\.nix\\'")
 
+;; Direnv integration
+(use-package direnv
+ :config
+ (direnv-mode))
+
 ;; Yasnippet
 ;; Snippet collection
 (use-package yasnippet-snippets)
