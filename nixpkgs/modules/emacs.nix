@@ -3,7 +3,6 @@
 {
 
   home.packages = with pkgs; [
-    clang
     clang-tools
     python39Packages.python-lsp-server
     python39Packages.pyflakes
