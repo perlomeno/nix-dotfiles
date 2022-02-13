@@ -9,9 +9,9 @@
 (global-hl-line-mode)
 
 ;; Set color theme
-(use-package color-theme-sanityinc-tomorrow
+(use-package doom-themes
   :config
-  (load-theme 'sanityinc-tomorrow-day t))
+  (load-theme 'doom-tomorrow-day t))
   
 ;; Modeline configuration
 (use-package minions
