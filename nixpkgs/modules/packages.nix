@@ -8,6 +8,7 @@
     foliate
     joplin-desktop
     libreoffice
+    newsflash
     pandoc
     # multimedia
     ffmpeg
