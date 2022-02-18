@@ -75,15 +75,6 @@
     gnome.yelp
   ];
 
-  programs.neovim = {
-    enable = true;
-    configure = {
-      packages.myVimPackage = with pkgs.vimPlugins; {
-        start = [vim-nix];
-      };
-    };
-  };
-
   nixpkgs.config.allowUnfree = true;
 
   #

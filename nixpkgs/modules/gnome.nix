@@ -21,7 +21,7 @@
         "chromium-browser.desktop"
 	"emacs.desktop"
         "nautilus.desktop"
-        "evince.desktop"
+        "code.desktop"
       ];
     };
 

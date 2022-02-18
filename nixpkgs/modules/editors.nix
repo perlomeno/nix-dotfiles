@@ -39,4 +39,14 @@
     };
   };
 
+  programs.neovim = {
+    enable = true;
+    plugins = with pkgs.vimPlugins; [
+      vim-nix
+    ];
+  };
+
+  xdg.configFile."nvim".recursive = true;
+  xdg.configFile."nvim".source = ../configs/neovim;
+
 }
