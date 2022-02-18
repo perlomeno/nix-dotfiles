@@ -18,4 +18,15 @@
   xdg.configFile."emacs".recursive = true;
   xdg.configFile."emacs".source = ../configs/emacs;
 
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      github.github-vscode-theme
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-toolsai.jupyter
+      ms-vscode.cpptools
+    ];
+  };
+
 }
