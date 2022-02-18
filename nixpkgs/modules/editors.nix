@@ -27,6 +27,10 @@
       ms-toolsai.jupyter
       ms-vscode.cpptools
     ];
+    userSettings = {
+      "workbench.colorTheme" = "GitHub Light Default";
+      "editor.fontFamily" = "Iosevka, Menlo, Monaco, 'Courier New', monospace";
+    };
   };
 
 }
