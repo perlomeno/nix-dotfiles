@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }:
 
 {
+  home.packages = with pkgs; [
+    iosevka
+  ];
+
   dconf.settings = {
   
     "org/gnome/settings-daemon/plugins/color" = {
@@ -19,6 +23,10 @@
         "nautilus.desktop"
         "evince.desktop"
       ];
+    };
+
+    "org/gnome/desktop/interface" = {
+      monospace-font-name = "Iosevka 13";
     };
 
     "org/gnome/desktop/background" = {
