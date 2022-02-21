@@ -1,0 +1,59 @@
+* nix-dotfiles
+
+Configuration file for my computers running NixOS.
+
+** Installation
+
+When installing NixOS, copy ~configuration.nix~ and device-specific configuration (split into ~hardware-configuration.nix~ and ~device.nix~) to ~/mnt/etc/nixos~.
+If you plan to use my dotfiles in an already installed NixOS you can just run ~nixos-bootstrap.sh~.
+
+** Home-manager
+
+I manage user-specific configuration through [[https://github.com/nix-community/home-manager][home-manager]].
+Install home-manager following the official home-manager [[https://nix-community.github.io/home-manager/index.html#sec-install-standalone][documentation]] and run ~hm-bootstrap.sh~.
+
+* Repository structure
+
+#+begin_src
+.
+├── hm-bootstrap.sh                     # script to bootstrap system configuration
+├── nixos-bootstrap.sh                  # script to bootstrap user configuration
+├── nixos
+│  ├── configuration.nix                # common system configuration
+│  ├── ap-desktop                       # desktop computer specific configuration
+│  │  ├── device.nix
+│  │  └── hardware-configuration.nix
+│  └── thinkbook                        # notebook specific configuration
+│     ├── device.nix
+│     └── hardware-configuration.nix
+├── nixpkgs
+│  ├── config.nix
+│  ├── configs
+│  │  ├── emacs                         # emacs configuration files
+│  │  │  ├── init.el
+│  │  │  └── lisp
+│  │  │     ├── ap-completion.el
+│  │  │     ├── ap-dev.el
+│  │  │     ├── ap-dired.el
+│  │  │     ├── ap-elpa.el
+│  │  │     ├── ap-emms.el
+│  │  │     ├── ap-eshell.el
+│  │  │     ├── ap-irc.el
+│  │  │     ├── ap-lang-c.el
+│  │  │     ├── ap-lang-lisp.el
+│  │  │     ├── ap-lang-python.el
+│  │  │     ├── ap-movement.el
+│  │  │     ├── ap-org.el
+│  │  │     └── ap-ui.el
+│  │  └── neovim                        # neovim configuration files
+│  │     └── init.vim
+│  ├── home.nix
+│  ├── modules
+│  │  ├── bash.nix                      # shell and cli tools configuration module
+│  │  ├── editors.nix                   # text editors configuration module
+│  │  ├── gnome.nix                     # desktop environment configuration module
+│  │  └── packages.nix                  # installed software
+│  └── pictures
+│     └── wallpaper.png
+└── startpage.html                      # browser startpage
+#+end_src
