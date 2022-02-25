@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-
+  #
+  # Emacs
+  #
+  
   home.packages = with pkgs; [
     clang-tools
     haskell-language-server
@@ -18,6 +21,10 @@
 
   xdg.configFile."emacs".recursive = true;
   xdg.configFile."emacs".source = ../configs/emacs;
+
+  #
+  # VSCode
+  #
 
   programs.vscode = {
     enable = true;
@@ -40,6 +47,10 @@
     };
   };
 
+  #
+  # Neovim
+  #
+
   programs.neovim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
@@ -49,5 +60,14 @@
 
   xdg.configFile."nvim".recursive = true;
   xdg.configFile."nvim".source = ../configs/neovim;
+
+  #
+  # Other IDEs
+  #
+
+  home.packages = with pkgs; [
+    jetbrains.clion
+    jetbrains.pycharm-community
+  ];
 
 }
