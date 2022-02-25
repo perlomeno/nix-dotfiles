@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  #
-  # Emacs
-  #
   
   home.packages = with pkgs; [
     # Fonts
@@ -19,6 +16,10 @@
     jetbrains.clion
     jetbrains.pycharm-community
   ];
+
+  #
+  # Emacs
+  #
 
   programs.emacs = {
     enable = true;
@@ -65,13 +66,5 @@
 
   xdg.configFile."nvim".recursive = true;
   xdg.configFile."nvim".source = ../configs/neovim;
-
-  #
-  # Other IDEs
-  #
-
-  home.packages = with pkgs; [
-
-  ];
 
 }
