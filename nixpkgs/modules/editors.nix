@@ -4,6 +4,7 @@
 
   home.packages = with pkgs; [
     clang-tools
+    haskell-language-server
     iosevka
     python39Packages.python-lsp-server
     python39Packages.pyflakes

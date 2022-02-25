@@ -39,6 +39,7 @@
 (require 'ap-completion)
 (require 'ap-dev)
 (require 'ap-lang-c)
+(require 'ap-lang-haskell)
 (require 'ap-lang-lisp)
 (require 'ap-lang-python)
 (require 'ap-emms)
