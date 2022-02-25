@@ -6,13 +6,18 @@
   #
   
   home.packages = with pkgs; [
-    clang-tools
-    haskell-language-server
+    # Fonts
     iosevka
+    # LSP servers
     python39Packages.python-lsp-server
     python39Packages.pyflakes
-    racket
+    clang-tools
+    haskell-language-server
+    # Latex
     (texlive.combine { inherit (texlive) scheme-small wrapfig capt-of mhchem chemfig; })
+    # IDEs
+    jetbrains.clion
+    jetbrains.pycharm-community
   ];
 
   programs.emacs = {
@@ -66,8 +71,7 @@
   #
 
   home.packages = with pkgs; [
-    jetbrains.clion
-    jetbrains.pycharm-community
+
   ];
 
 }
