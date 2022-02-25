@@ -26,7 +26,7 @@
     };
 
     "org/gnome/desktop/interface" = {
-      monospace-font-name = "Iosevka 13";
+      monospace-font-name = "Iosevka 12";
     };
 
     "org/gnome/desktop/background" = {
