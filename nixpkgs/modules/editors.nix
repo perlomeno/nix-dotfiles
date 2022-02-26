@@ -15,6 +15,7 @@
     # IDEs
     jetbrains.clion
     jetbrains.pycharm-community
+    octaveFull
   ];
 
   #
