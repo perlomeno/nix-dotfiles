@@ -19,9 +19,8 @@
       favorite-apps = [
         "gnome-terminal.desktop"
         "chromium-browser.desktop"
-	"emacs.desktop"
+        "emacs.desktop"
         "nautilus.desktop"
-        "code.desktop"
       ];
     };
 
