@@ -16,6 +16,11 @@
     jetbrains.clion
     jetbrains.pycharm-community
     octaveFull
+    # Compilers
+    gcc
+    # Build tools
+    gnumake
+    cmake
   ];
 
   #

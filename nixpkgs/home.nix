@@ -11,7 +11,7 @@
 
   imports = [
     ./modules/bash.nix
-    ./modules/editors.nix
+    ./modules/development.nix
     ./modules/gnome.nix
     ./modules/packages.nix
   ];
