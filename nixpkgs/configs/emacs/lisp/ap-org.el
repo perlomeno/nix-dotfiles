@@ -14,7 +14,7 @@
                   (org-level-6 . 1.0)
                   (org-level-7 . 1.0)
                   (org-level-8 . 1.0)))
-    (set-face-attribute (car face) nil :font "Monospace" :weight 'bold :height (cdr face))))
+    (set-face-attribute (car face) nil :font "Iosevka" :weight 'bold :height (cdr face))))
 
 ;; Center text when in org-mode
 (defun ap/org-mode-visual-fill ()
