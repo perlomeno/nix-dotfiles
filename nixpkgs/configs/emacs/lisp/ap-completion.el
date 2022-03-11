@@ -22,7 +22,7 @@
 (use-package emacs
   :init
   ;; TAB cycle if there are only few candidates
-  (setq completion-cycle-threshold 3)
+  (setq completion-cycle-threshold 2)
   ;; Enable indentation+completion using the TAB key.
   (setq tab-always-indent 'complete))
 
