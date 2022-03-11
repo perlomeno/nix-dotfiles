@@ -1,4 +1,3 @@
-;; Magit
 ;; Git client
 (use-package magit)
 
@@ -17,14 +16,12 @@
  :config
  (direnv-mode))
 
-;; Yasnippet
 ;; Snippet collection
 (use-package yasnippet-snippets)
 (use-package yasnippet
   :config
   (yas-global-mode 1))
 
-;; Smartparens
 ;; Minor mode to deal with pairs
 (use-package smartparens
   :config
@@ -32,7 +29,6 @@
   (smartparens-global-mode)
   (show-smartparens-global-mode))
 
-;; Project
 ;; Project management tool
 (defun ap/project-magit-status ()
   "Run `magit-status' on project."
@@ -50,4 +46,5 @@
 				  (project-dired "Dired" nil)
 				  (project-eshell "Eshell" nil)
 				  (ap/project-magit-status "Magit" nil))))
+
 (provide 'ap-dev)

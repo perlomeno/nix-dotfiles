@@ -1,18 +1,13 @@
-;; Dired
-;; Emacs file manager
-
-(use-package dired-x
-  :ensure nil)
-
 (defun ap/dired-goto-parent ()
+  "Browse to the parent directory"
   (interactive)
   (find-alternate-file ".."))
 
-(defun ap/dired-mode-setup ()
-  (dired-hide-details-mode)
-  (dired-omit-mode)
-  (display-line-numbers-mode -1))
+;; Extra functionality for dired
+(use-package dired-x
+  :ensure nil)
 
+;; File manager
 (use-package dired
   :ensure nil
   :config
@@ -20,15 +15,23 @@
   (setq dired-listing-switches "-lahX --group-directories-first")
   (setq dired-omit-files
       (concat dired-omit-files "\\|^\\..+$"))
-  :hook (dired-mode . ap/dired-mode-setup)
-  :bind (:map dired-mode-map
-	      ("RET" . dired-find-alternate-file)
-	      ("^" . ap/dired-goto-parent)
-	      ("h" . dired-omit-mode)))
+  :hook
+  (dired-mode . dired-hide-details-mode)
+  (dired-mode . dired-omit-mode)
+  (dired-mode . (lambda () (display-line-numbers-mode -1)))
+  :bind
+  (:map dired-mode-map
+	("RET" . dired-find-alternate-file)
+	("^" . ap/dired-goto-parent)
+	("h" . dired-omit-mode)))
 
+;; Subtree support for dired
 (use-package dired-subtree
-  :bind (:map dired-mode-map ("TAB" . dired-subtree-toggle)))
+  :bind
+  (:map dired-mode-map
+	("TAB" . dired-subtree-toggle)))
 
+;; Extra font lock rules
 (use-package diredfl
   :hook (dired-mode . diredfl-global-mode))
 

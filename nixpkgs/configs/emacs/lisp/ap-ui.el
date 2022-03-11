@@ -8,11 +8,11 @@
 (global-display-line-numbers-mode)
 (global-hl-line-mode)
 
-;; Set color theme
-(use-package doom-themes
+;; Theme configuration
+(use-package color-theme-sanityinc-tomorrow
   :config
-  (load-theme 'doom-tomorrow-day t))
-  
+  (load-theme 'sanityinc-tomorrow-day t))
+
 ;; Modeline configuration
 (use-package minions
   :config
@@ -24,9 +24,5 @@
 (set-face-attribute 'fixed-pitch nil :font "Iosevka" :height 130)
 (set-face-attribute 'variable-pitch nil :font "DejaVu Sans" :height 120)
 (set-fontset-font t 'symbol (font-spec :family "Noto Color Emoji"))
-
-;; Keymaps to change text scale
-(global-set-key (kbd "C-c +") 'text-scale-increase)
-(global-set-key (kbd "C-c -") 'text-scale-decrease)
 
 (provide 'ap-ui)
