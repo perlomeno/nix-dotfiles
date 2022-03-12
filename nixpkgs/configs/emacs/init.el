@@ -11,6 +11,9 @@
 
 (add-hook 'emacs-startup-hook #'ap/display-startup-time)
 
+;; Maximize window on startup
+(add-hook 'window-setup-hook 'toggle-frame-maximized t)
+
 ;; Custom
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
