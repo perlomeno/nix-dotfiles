@@ -1,5 +1,7 @@
+;; Configure the garbage-collector
 (setq gc-cons-threshold (* 50 1000 1000))
 
+;; Show startup time in the minibuffer
 (defun ap/display-startup-time ()
   (message "Emacs loaded in %s with %d garbage collections."
            (format "%.2f seconds"
