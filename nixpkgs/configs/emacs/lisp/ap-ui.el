@@ -22,7 +22,9 @@
 ;; Modeline configuration
 (use-package moody
   :config
-  (setq moody-mode-line-height 50)
+  (if (string= (system-name) "thinkbook")
+      (setq moody-mode-line-height 50)
+    (setq moody-mode-line-height 25))
   (setq x-underline-at-descent-line t)
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode)
