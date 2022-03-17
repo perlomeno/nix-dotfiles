@@ -9,6 +9,8 @@
   (setq eshell-hist-ignoredups t)
   (setq eshell-cmpl-ignore-case t))
 
+(use-package pcmpl-args)
+
 (use-package eshell-git-prompt
   :config
   (eshell-git-prompt-use-theme 'git-radar))
