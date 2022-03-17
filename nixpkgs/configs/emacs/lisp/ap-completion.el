@@ -19,6 +19,15 @@
   :init
   (corfu-global-mode))
 
+;; Text-based completion prefixes
+(use-package kind-icon
+  :ensure t
+  :after corfu
+  :config
+  (add-to-list 'corfu-margin-formatters #'kind-icon-margin-formatter)
+  (setq kind-icon-default-face 'corfu-default)
+  (setq kind-icon-use-icons nil))
+
 (use-package emacs
   :init
   ;; TAB cycle if there are only few candidates
