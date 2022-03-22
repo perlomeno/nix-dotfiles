@@ -35,6 +35,8 @@
   (setq minions-mode-line-lighter "~")
   (minions-mode 1))
 
+(column-number-mode 1)
+
 ;; Font configuration
 (set-face-attribute 'default nil :font "Iosevka" :height 130)
 (set-face-attribute 'fixed-pitch nil :font "Iosevka" :height 130)
