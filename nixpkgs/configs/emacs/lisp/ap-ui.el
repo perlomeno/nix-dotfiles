@@ -28,7 +28,13 @@
   (setq x-underline-at-descent-line t)
   (moody-replace-mode-line-buffer-identification)
   (moody-replace-vc-mode)
-  (moody-replace-eldoc-minibuffer-message-function))
+  (moody-replace-eldoc-minibuffer-message-function)
+  ;; flash modeline instead of ringing the bell
+  (setq visible-bell nil
+	ring-bell-function 'flash-mode-line)
+  (defun flash-mode-line ()
+    (invert-face 'mode-line)
+    (run-with-timer 0.1 nil #'invert-face 'mode-line)))
 
 (use-package minions
   :config
@@ -45,5 +51,20 @@
 (set-face-attribute 'fixed-pitch nil :font "Iosevka" :height 130)
 (set-face-attribute 'variable-pitch nil :font "DejaVu Sans" :height 120)
 (set-fontset-font t 'symbol (font-spec :family "Noto Color Emoji"))
+
+;; Ligature support
+(use-package ligature
+  :load-path (lambda () (expand-file-name "lisp/ligature.el" user-emacs-directory))
+  :config
+  ;; Enable all Iosevka ligatures in programming modes
+  (ligature-set-ligatures 'prog-mode '("<---" "<--"  "<<-" "<-" "->" "-->" "--->" "<->" "<-->" "<--->" "<---->" "<!--"
+                                       "<==" "<===" "<=" "=>" "=>>" "==>" "===>" ">=" "<=>" "<==>" "<===>" "<====>" "<!---"
+                                       "<~~" "<~" "~>" "~~>" "::" ":::" "==" "!=" "===" "!=="
+                                       ":=" ":-" ":+" "<*" "<*>" "*>" "<|" "<|>" "|>" "+:" "-:" "=:" "<******>" "++" "+++"))
+  ;; Enables ligature checks globally in all buffers. You can also do it
+  ;; per mode with `ligature-mode'.
+  (global-ligature-mode t))
+
+
 
 (provide 'ap-ui)
