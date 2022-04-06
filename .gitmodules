@@ -1,3 +1,0 @@
-[submodule "nixpkgs/configs/emacs/lisp/ligature.el"]
-	path = nixpkgs/configs/emacs/lisp/ligature.el
-	url = https://github.com/mickeynp/ligature.el.git
