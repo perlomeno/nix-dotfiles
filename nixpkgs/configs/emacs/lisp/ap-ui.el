@@ -36,8 +36,6 @@
   (minions-mode 1))
 
 (column-number-mode 1)
-(display-time-mode 1)
-(setq display-time-24hr-format t)
 
 ;; Font configuration
 (set-face-attribute 'default nil :font "Iosevka" :height 130)
