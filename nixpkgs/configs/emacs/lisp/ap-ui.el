@@ -37,6 +37,13 @@
 
 (column-number-mode 1)
 
+;; Flash modeline instead of ringing the bell
+(setq visible-bell nil
+      ring-bell-function 'flash-mode-line)
+(defun flash-mode-line ()
+  (invert-face 'mode-line)
+  (run-with-timer 0.1 nil #'invert-face 'mode-line))
+
 ;; Font configuration
 (set-face-attribute 'default nil :font "Iosevka" :height 130)
 (set-face-attribute 'fixed-pitch nil :font "Iosevka" :height 130)
