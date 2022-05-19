@@ -11,7 +11,7 @@
     clang-tools
     haskell-language-server
     # Latex
-    (texlive.combine { inherit (texlive) scheme-small wrapfig capt-of mhchem chemfig; })
+    (texlive.combine { inherit (texlive) nopageno scheme-small wrapfig capt-of mhchem chemfig verse; })
     # IDEs
     jetbrains.clion
     jetbrains.pycharm-community
