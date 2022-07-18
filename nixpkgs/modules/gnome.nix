@@ -17,9 +17,9 @@
       disable-user-extensions = false;
       enabled-extensions = [ "appindicatorsupport@rgcjonas.gmail.com" ];
       favorite-apps = [
-        "gnome-terminal.desktop"
+        "org.gnome.Console.desktop"
         "chromium-browser.desktop"
-        "emacs.desktop"
+        "emacsclient.desktop"
         "nautilus.desktop"
       ];
     };
