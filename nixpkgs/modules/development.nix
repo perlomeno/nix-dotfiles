@@ -29,6 +29,7 @@
 
   programs.emacs = {
     enable = true;
+    package = pkgs.emacs28NativeComp;
   };
 
   xdg.configFile."emacs".recursive = true;

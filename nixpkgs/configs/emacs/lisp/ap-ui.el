@@ -1,7 +1,8 @@
 ;; Disable menu bar, scroll bar, tool bar and startup screen
 (menu-bar-mode -1)
-(toggle-scroll-bar -1)
+(scroll-bar-mode -1)
 (tool-bar-mode -1)
+
 (setq inhibit-startup-screen t)
 
 ;; Display line numbers and highlight current line
@@ -45,6 +46,7 @@
   (run-with-timer 0.1 nil #'invert-face 'mode-line))
 
 ;; Font configuration
+(add-to-list 'default-frame-alist '(font . "Iosevka 13"))
 (set-face-attribute 'default nil :font "Iosevka" :height 130)
 (set-face-attribute 'fixed-pitch nil :font "Iosevka" :height 130)
 (set-face-attribute 'variable-pitch nil :font "DejaVu Sans" :height 120)
